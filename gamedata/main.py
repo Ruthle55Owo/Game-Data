@@ -1,7 +1,5 @@
 from typing import Union
 import requests
-import os
-import dotenv
 
 class Brawl_Stars():
 
