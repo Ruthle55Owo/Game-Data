@@ -1,4 +1,3 @@
-
 from setuptools import setup, find_packages
 import codecs
 import os
@@ -18,7 +17,7 @@ setup(
     install_requires=['requests','typing',''],
     keywords=['python','Games','Data','Game data'],
     classifiers=[
-        "Development Status :: 1 - Developing",
+        "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
