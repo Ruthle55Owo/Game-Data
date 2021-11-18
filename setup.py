@@ -1,8 +1,13 @@
 from setuptools import setup, find_packages
-import codecs
-import os
+import pathlib
 
-VERSION = '0.0.1'
+# The directory containing this file
+HERE = pathlib.Path(__file__).parent
+
+# The text of the README file
+README = (HERE / "README.md").read_text()
+
+VERSION = '0.1.1'
 DESCRIPTION = 'Get data from games where the api is available'
 LONG_DESCRIPTION = 'Planning to get more game data...'
 
@@ -14,7 +19,9 @@ setup(
     author_email="<ruthle55.enquiries@gmail.com>",
     description=DESCRIPTION,
     packages=find_packages(),
-    install_requires=['requests','typing',''],
+    long_description=README,
+    long_description_content_type="text/markdown",
+    install_requires=['requests','typing'],
     keywords=['python','Games','Data','Game data'],
     classifiers=[
         "Development Status :: 1 - Planning",

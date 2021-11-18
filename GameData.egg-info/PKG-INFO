@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: GameData
-Version: 0.0.1
+Version: 0.1.1
 Summary: Get data from games where the api is available
 Home-page: UNKNOWN
 Author: Ruthle55 (Thaddeus Teo)
@@ -14,7 +14,10 @@ Classifier: Programming Language :: Python :: 3
 Classifier: Operating System :: Unix
 Classifier: Operating System :: MacOS :: MacOS X
 Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
 License-File: LICENSE
 
-UNKNOWN
+# Get available game data from games you love to play
+- Games done:
+    - Brawl Stars
 

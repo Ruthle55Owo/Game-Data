@@ -7,4 +7,4 @@ GameData.egg-info/dependency_links.txt
 GameData.egg-info/requires.txt
 GameData.egg-info/top_level.txt
 gamedata/__init__.py
-gamedata/main.py
+gamedata/mainfunc.py
