@@ -1,9 +1,11 @@
 from typing import Union
 import requests
 
-class Brawl_Stars():
+class Brawl_Stars_API():
 
     def __init__(self,api_key:str) -> None:
+        if api_key is None:
+            raise Exception("Input a api key")
         self.api_key = api_key
         self.header = {"authorization": f"Bearer {self.api_key}", "Accept": "application/json"}
 
@@ -16,9 +18,9 @@ class Brawl_Stars():
                 response_dict = response.json()
                 reason = response_dict["reason"]
                 message = response_dict["message"]
-                raise Exception(f"{bad_response_codes[response.status_code]} Error code [{response.status_code}]. Reason: {reason}. Message: {message}")
+                raise Exception(f"{bad_response_codes[response.status_code]} Error status code [{response.status_code}]. Reason: {reason}. Message: {message}")
             except:
-                raise Exception(f"{bad_response_codes[response.status_code]} Error code [{response.status_code}].")
+                raise Exception(f"{bad_response_codes[response.status_code]} Error status code [{response.status_code}].")
                 
     def get_player_stats(self,player_id:str = None) -> Union[dict,str]:
         """[Get a player's stats]

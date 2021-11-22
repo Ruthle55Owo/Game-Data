@@ -1,3 +1,22 @@
+Metadata-Version: 2.1
+Name: EzApiData
+Version: 0.1.2
+Summary: Get data from api easier
+Home-page: UNKNOWN
+Author: Ruthle55 (Thaddeus Teo)
+Author-email: <ruthle55.enquiries@gmail.com>
+License: UNKNOWN
+Keywords: python,Games,Data,Game data
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 ## EzApiData
 ## Get available data from api's that you can use
 
@@ -35,3 +54,5 @@ API_CALL.get_data("<PASS-PARAMETERS>")
 - https://developer.brawlstars.com/#/
 - https://developer.clashofclans.com/#/
 - https://yfapi.net
+
+

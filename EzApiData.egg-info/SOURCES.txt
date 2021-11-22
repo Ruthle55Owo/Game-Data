@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+EzApiData.egg-info/PKG-INFO
+EzApiData.egg-info/SOURCES.txt
+EzApiData.egg-info/dependency_links.txt
+EzApiData.egg-info/requires.txt
+EzApiData.egg-info/top_level.txt
+ezapidata/__init__.py
+ezapidata/__main__.py
+ezapidata/ApiList/__init__.py
+ezapidata/ApiList/dailyuseapi/__init__.py
+ezapidata/ApiList/dailyuseapi/weather.py
+ezapidata/ApiList/games/Brawl_Stars.py
+ezapidata/ApiList/games/__init__.py

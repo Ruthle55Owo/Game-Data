@@ -7,13 +7,13 @@ HERE = pathlib.Path(__file__).parent
 # The text of the README file
 README = (HERE / "README.md").read_text()
 
-VERSION = '0.1.1'
-DESCRIPTION = 'Get data from games where the api is available'
+VERSION = '0.1.2'
+DESCRIPTION = 'Get data from api easier'
 LONG_DESCRIPTION = 'Planning to get more game data...'
 
 # Setting up
 setup(
-    name="GameData",
+    name="EzApiData",
     version=VERSION,
     author="Ruthle55 (Thaddeus Teo)",
     author_email="<ruthle55.enquiries@gmail.com>",
@@ -21,7 +21,7 @@ setup(
     packages=find_packages(),
     long_description=README,
     long_description_content_type="text/markdown",
-    install_requires=['requests','typing'],
+    install_requires=['requests>=2.25.0','typing>=3.7.4'],
     keywords=['python','Games','Data','Game data'],
     classifiers=[
         "Development Status :: 1 - Planning",

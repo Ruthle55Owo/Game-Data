@@ -1,9 +1,35 @@
+"""
+MIT License
+
+Copyright (c) 2021 Ruthle55Owo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+"""
 from typing import Union
 import requests
 
-class Brawl_Stars():
+class Brawl_Stars_API():
 
-    def __init__(self,api_key:str) -> None:
+    def __init__(self,api_key:str=None) -> None:
+        if api_key is None:
+            raise Exception("Input a api key")
         self.api_key = api_key
         self.header = {"authorization": f"Bearer {self.api_key}", "Accept": "application/json"}
 
@@ -16,9 +42,9 @@ class Brawl_Stars():
                 response_dict = response.json()
                 reason = response_dict["reason"]
                 message = response_dict["message"]
-                raise Exception(f"{bad_response_codes[response.status_code]} Error code [{response.status_code}]. Reason: {reason}. Message: {message}")
+                raise Exception(f"{bad_response_codes[response.status_code]} Error status code [{response.status_code}]. Reason: {reason}. Message: {message}")
             except:
-                raise Exception(f"{bad_response_codes[response.status_code]} Error code [{response.status_code}].")
+                raise Exception(f"{bad_response_codes[response.status_code]} Error status code [{response.status_code}].")
                 
     def get_player_stats(self,player_id:str = None) -> Union[dict,str]:
         """[Get a player's stats]
